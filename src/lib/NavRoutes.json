@@ -1,0 +1,19 @@
+{
+  "routes": [
+    {
+      "id": "home",
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "id": "myCards",
+      "name": "My Cards",
+      "path": "/my-cards"
+    },
+    {
+      "id": "aboutMe",
+      "name": "About Me",
+      "path": "/about-me"
+    }
+  ]
+}
