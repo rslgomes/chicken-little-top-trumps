@@ -22,7 +22,11 @@
   
 .cardList {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .cardHolder {
@@ -89,4 +93,44 @@
 .icon {
     height: 40px;
     width: 40px;
+}
+
+.createCard {
+    height: 320px;
+    width: 200px;
+
+    border: 2px solid var(--blueLight);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    opacity: 0.6;
+}
+
+.createCard:hover{
+    opacity: 0.8;
+}
+
+.createButton {
+    border: 4px solid var(--blueLight);
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+
+    padding: 0;
+    margin: 0;
+
+    color: var(--blueLight);
+    font-size: 30px;
+    font-weight: 600;
+
+    opacity: 0.6;
+}
+
+.createButton:hover {
+    opacity: 1;
 }

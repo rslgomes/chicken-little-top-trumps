@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from '../app/styles/mycards.module.css';
+
 import angerIcon from '../lib/Icons/angerIcon.png';
 import cutenessIcon from '../lib/Icons/cutenessIcon.png';
 import peckStrengthIcon from '../lib/Icons/peckStrengthIcon.png';
