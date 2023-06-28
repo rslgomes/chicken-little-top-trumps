@@ -23,11 +23,12 @@
   
 .cardList {
     display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap-reverse;
-    justify-content: center;
+    /* flex-direction: row-reverse; */
+    /* flex-wrap: wrap-reverse; */
+    /* justify-content: center; */
     align-content: center;
-    align-items: center;
+    /* align-items: center; */
+    width: 100%;
 }
 
 .cardHolder {
