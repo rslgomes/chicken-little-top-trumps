@@ -4,7 +4,9 @@
   --purpleLight: #9410A5;
   --green: #96E916;
   --red: #A51020;
-  --blueLight: #12BDAB
+  --blueLight: #12BDAB;
+  --white: #FEFEFE;
+  --black: #010101;
 }
 * {
   box-sizing: border-box;
@@ -20,9 +22,11 @@ body {
 .nav {
   height: 50px;
   width: 100%;
-  background-color: var(--purple);
+  background-color: var(--purpleDark);
   position: relative;
-  border-bottom: 1px solid var(--red);
+  box-shadow: 0px 1px 1px 0px var(--black);
+  /* border-bottom: 1px solid var(--red); */
+
 }
 
 .nav > .nav-header {
@@ -31,9 +35,9 @@ body {
 
 .nav > .nav-header > .nav-title {
   display: inline-block;
-  font-size: 22px;
-  color: var(--green);
-  padding: 10px 10px 10px 10px;
+  font-size: 28px;
+  color: var(--white);
+  padding: 10px;
 }
 
 .nav > .nav-btn {
@@ -111,6 +115,8 @@ body {
 form {
 	display: block;
   padding: 10px;
+  height: 100%;
+  background-color: var(--purpleDark);
 }
 
 input {
