@@ -1,25 +1,52 @@
+import Image from 'next/image';
 import styles from '../app/styles/mycards.module.css';
-import Image from 'next/image'
 import angerIcon from '../lib/Icons/angerIcon.png';
+import cutenessIcon from '../lib/Icons/cutenessIcon.png';
+import peckStrengthIcon from '../lib/Icons/peckStrengthIcon.png';
+import crestSizeIcon from '../lib/Icons/crestSizeIcon.png';
 
 export default function RenderTableBox({ anger, cuteness, peckStrength, crestSize }) {
   return (
-    <div>
-      <table className={ styles.table }>
+    <table className={ styles.table }>
+      <tbody>
         <tr>
-          <td>anger</td>
+          <td>
+            <Image
+              className={ styles.icon }
+              alt="anger"
+              src={ angerIcon }
+            />
+          </td>
           <td>{ anger }</td>
-          <td>Cuteness</td>
+          <td>
+            <Image
+              className={ styles.icon }
+              alt="cuteness"
+              src={ cutenessIcon }
+            />
+          </td>
           <td>{ cuteness }</td>
         </tr>
         <tr>
-          <td>Peck Strength</td>
+          <td>
+            <Image
+              className={ styles.icon }
+              alt="peckStrength"
+              src={ peckStrengthIcon }
+            />
+          </td>
           <td>{ peckStrength }</td>
-          <td>Crest Size</td>
+          <td>
+            <Image
+              className={ styles.icon }
+              alt="crestSize"
+              src={ crestSizeIcon }
+            />
+          </td>
           <td>{ crestSize }</td>
         </tr>
-      </table>
-    </div>
+      </tbody>
+    </table>
   );
 }
 
