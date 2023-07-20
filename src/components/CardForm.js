@@ -37,10 +37,10 @@ export default function CardForm({
       };
     }
 
-    const updateCardById = (id, updatedCard) => {
+    const updateCard = (updatedCard) => {
       setCards((prevCards) => {
         return prevCards.map((card) => {
-          if (card.id === id) {
+          if (card.id === updatedCard.id) {
             return { ...card, ...updatedCard };
           }
           return card;
@@ -53,7 +53,7 @@ export default function CardForm({
     };
 
     if (isEdit.state) {
-      updateCardById(isEdit.id, setCardToRender(isEdit.id, formData));
+      updateCard(setCardToRender(isEdit.id, formData));
     } else {
       addNewCard(setCardToRender(Date.now(), formData));
     }
