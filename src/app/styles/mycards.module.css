@@ -12,7 +12,7 @@
 
     border: 1px solid var(--purpleDark);
     border-radius: 10px;
-    padding: auto;
+    padding: 0;
     margin: auto;
 
     display: flex;
@@ -20,6 +20,7 @@
     justify-content: center;
     align-content: center;
     align-items: center;
+    text-align: start;
 
 }
   

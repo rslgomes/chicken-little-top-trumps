@@ -22,8 +22,20 @@ export default function CardForm({
     resetFormAndList();
   };
 
-  const handleUpdateCard = (event) => {
+  const handleSubmitForm = (event) => {
     event.preventDefault();
+
+    function setCardToRender(id, formData) {
+      return {
+        id,
+        cardName: formData['Card Name'],
+        imageUrl: formData['Image Url'],
+        anger: formData['Anger'],
+        peckStrength: formData['Peck Strength'],
+        cuteness: formData['Cuteness'],
+        crestSize: formData['Crest Size'],
+      };
+    }
 
     const updateCardById = (id, updatedCard) => {
       setCards((prevCards) => {
@@ -36,52 +48,15 @@ export default function CardForm({
       });
     };
 
-    const {
-      'Card Name': cardName,
-      'Image Url': imageUrl,
-      Anger: anger,
-      'Peck Strength': peckStrength,
-      Cuteness: cuteness,
-      'Crest Size': crestSize,
-    } = formData;
-
-    const updatedCard = {
-      id: isEdit.id,
-      cardName,
-      imageUrl,
-      anger,
-      cuteness,
-      peckStrength,
-      crestSize,
+    const addNewCard = (newCard) => {
+      setCards((prevCards) => [...prevCards, newCard]);
     };
 
-    updateCardById(isEdit.id, updatedCard);
-    resetFormAndList();
-  };
-
-  const handleCreateCard = (event) => {
-    event.preventDefault();
-
-    const {
-      'Card Name': cardName,
-      'Image Url': imageUrl,
-      Anger: anger,
-      'Peck Strength': peckStrength,
-      Cuteness: cuteness,
-      'Crest Size': crestSize,
-    } = formData;
-
-    const newCard = {
-      id: Date.now(),
-      cardName,
-      imageUrl,
-      anger,
-      cuteness,
-      peckStrength,
-      crestSize,
-    };
-
-    setCards((prevCards) => [...prevCards, newCard]);
+    if (isEdit.state) {
+      updateCardById(isEdit.id, setCardToRender(isEdit.id, formData));
+    } else {
+      addNewCard(setCardToRender(Date.now(), formData));
+    }
 
     resetFormAndList();
   };
@@ -98,7 +73,7 @@ export default function CardForm({
     <div>
       <form
         className="form"
-        onSubmit={ isEdit.state ? handleUpdateCard : handleCreateCard }
+        onSubmit={ handleSubmitForm }
         onReset={ resetFormAndList }
       >
         <CardInputs
