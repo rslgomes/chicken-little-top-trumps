@@ -109,18 +109,23 @@ body {
   .nav > #nav-check:checked ~ .nav-links {
     height: calc(100vh - 50px);
     overflow-y: auto;
+    z-index: 2;
   }
 }
 
 form {
-	display: block;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 235px;
+  height: calc(100vh - 50px);
   padding: 10px;
-  height: 100%;
   background-color: var(--purpleDark);
 }
 
 input {
 	display: block;
+  width: 200px;
   margin-bottom: 5px;
   padding: 0.25rem;
   

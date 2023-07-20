@@ -3,37 +3,19 @@ import RenderCardImage from './RenderCardImage';
 import RenderTableBox from './RenderTableBox';
 import styles from '../app/styles/mycards.module.css';
 
-export default function DisplayCard({
-  card,
-  setFormData,
-  setIsEdit,
-}) {
+export default function DisplayEditableCard({ formData }) {
   const {
-    id,
-    cardName,
-    imageUrl,
-    anger,
-    cuteness,
-    peckStrength,
-    crestSize,
-  } = card;
-
-  const handleCardClick = () => {
-    setFormData(
-      { 'Card Name': cardName,
-        'Image Url': imageUrl,
-        Anger: anger,
-        'Peck Strength': peckStrength,
-        Cuteness: cuteness,
-        'Crest Size': crestSize,
-      },
-    );
-    setIsEdit({ state: true, id });
-  };
+    'Card Name': cardName,
+    'Image Url': imageUrl,
+    Anger: anger,
+    'Peck Strength': peckStrength,
+    Cuteness: cuteness,
+    'Crest Size': crestSize,
+  } = formData;
 
   return (
     <div className={ styles.cardHolder }>
-      <button className={ styles.card } onClick={ handleCardClick }>
+      <div className={ styles.card }>
         <div className={ styles.nameContainer }>
           <RenderCardName
             cardName={ cardName }
@@ -53,7 +35,7 @@ export default function DisplayCard({
             crestSize={ crestSize }
           />
         </div>
-      </button>
+      </div>
     </div>
   );
 }
