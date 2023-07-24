@@ -1,4 +1,5 @@
 .myCards {
+    background-color: var(--purple);
     display: flex;
     flex-direction: row;
     min-height: calc(100vh - 50px);

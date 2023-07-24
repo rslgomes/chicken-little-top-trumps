@@ -1,15 +1,12 @@
-import RenderCardName from './RenderCardName';
-import RenderCardImage from './RenderCardImage';
-import RenderTableBox from './RenderTableBox';
-import styles from '../app/styles/mycards.module.css';
+import styles from '../app/styles/home.module.css';
+import cardStyles from '../app/styles/mycards.module.css';
 
-export default function DisplayCard({
-  card,
-  setFormData,
-  setIsEdit,
-}) {
+import RenderCardImage from './RenderCardImage';
+import RenderCardName from './RenderCardName';
+import RenderTableBox from './RenderTableBox';
+
+export default function RenderSampleCard({ card }) {
   const {
-    id,
     cardName,
     imageUrl,
     anger,
@@ -18,22 +15,9 @@ export default function DisplayCard({
     crestSize,
   } = card;
 
-  const handleCardClick = () => {
-    setFormData(
-      { 'Card Name': cardName,
-        'Image Url': imageUrl,
-        Anger: anger,
-        'Peck Strength': peckStrength,
-        Cuteness: cuteness,
-        'Crest Size': crestSize,
-      },
-    );
-    setIsEdit({ state: true, id });
-  };
-
   return (
     <div className={ styles.cardHolder }>
-      <button className={ styles.card } onClick={ handleCardClick }>
+      <div className={ cardStyles.card }>
         <RenderCardName cardName={ cardName } />
         <RenderCardImage
           imageUrl={ imageUrl }
@@ -45,7 +29,7 @@ export default function DisplayCard({
           peckStrength={ peckStrength }
           crestSize={ crestSize }
         />
-      </button>
+      </div>
     </div>
   );
 }

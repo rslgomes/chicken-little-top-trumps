@@ -26,6 +26,24 @@
       "peckStrength": 0,
       "cuteness": 0,
       "crestSize": 0
+    },
+    {
+      "id": 1,
+      "cardName": "XicoLiro",
+      "imageUrl": "https://i.ibb.co/B3cQVLq/chicken-Photo.png",
+      "anger": 12,
+      "peckStrength": 30,
+      "cuteness": 10,
+      "crestSize": 2
+    },
+    {
+      "id": 30,
+      "cardName": "Rodrigo Gomes",
+      "imageUrl": "https://lh3.googleusercontent.com/a/AAcHTtfdM6bsE03kynLPHXLCArdig9ufPmA7MFe6yu3D_TdiuXo=s288-c-no",
+      "anger": "react",
+      "peckStrength": "css",
+      "cuteness": "git",
+      "crestSize": "next"
     }
   ]
 }

@@ -16,25 +16,17 @@ export default function DisplayEditableCard({ formData }) {
   return (
     <div className={ styles.cardHolder }>
       <div className={ styles.card }>
-        <div className={ styles.nameContainer }>
-          <RenderCardName
-            cardName={ cardName }
-          />
-        </div>
-        <div className={ styles.imageContainer }>
-          <RenderCardImage
-            imageUrl={ imageUrl }
-            cardName={ cardName }
-          />
-        </div>
-        <div className={ styles.tableContainer }>
-          <RenderTableBox
-            anger={ anger }
-            cuteness={ cuteness }
-            peckStrength={ peckStrength }
-            crestSize={ crestSize }
-          />
-        </div>
+        <RenderCardName cardName={ cardName } />
+        <RenderCardImage
+          imageUrl={ imageUrl }
+          cardName={ cardName }
+        />
+        <RenderTableBox
+          anger={ anger }
+          cuteness={ cuteness }
+          peckStrength={ peckStrength }
+          crestSize={ crestSize }
+        />
       </div>
     </div>
   );

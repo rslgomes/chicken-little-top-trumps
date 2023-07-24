@@ -1,0 +1,159 @@
+.frame{
+    height: calc(100vh - 50px);
+    display: flex;
+    justify-content: space-around;
+}
+
+.firstLeft{
+    color: var(--white);
+    background-color: var(--purple);
+    width: 40%;
+    padding: 30px;
+
+}
+
+.firstLeft h1{
+    font-size: 10vw;
+    margin-left: 11vw;
+    position: relative;
+    mix-blend-mode: difference;
+}
+
+.firstLeft p {
+    position: relative;
+    width: 50vw;
+    font-size: 4vw;
+    color: var(--green)
+    
+}
+
+.firstRight{
+    background-color: var(--black);
+    color: var(--white);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    padding: 0 15vw 15vh 0;
+}
+
+.firstLeft .card {
+    justify-self: end;
+    padding: 0
+}
+
+.cardHolder {
+    background-color: var(--purpleDark);
+
+    height: 320px;
+    width: 200px;
+}
+
+.frameTwo {
+    display: flex;
+    height: calc(100vh - 50px);
+    background-color: var(--black);
+    flex-direction: column;
+    align-items: start;
+  }
+  
+  .stepExplanation {
+    text-align: center;
+    height: 40vh;
+  }
+  
+  .stepsContainer {
+    height: calc(60vh - 50px);
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100vw;
+    justify-content: flex-end;
+  }
+
+  .accordionStep {
+    width: 3rem;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .accordionStep.open {
+    width: min-content;
+    flex-wrap: nowrap;
+  }
+  
+  .accordionHeader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: var(--purpleDark);
+    justify-content: center;
+    height: 100%;
+    width: 3rem;
+    position: relative;
+    cursor: pointer;
+    border: 1px var(--white) solid;
+    border-bottom: none;
+  }
+
+  .accordionStep.open .accordionHeader {
+    background-color: var(--black);
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px var(--white) solid;
+  }
+
+  .invisibleButton {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 3rem;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  position: absolute;
+  }
+
+  .invisibleButton:hover{
+    background-color: var(--black);
+    color: var(--green);
+    opacity: 0.7
+  }
+
+  .buttonText { 
+    transform: rotate(270deg);
+    white-space: nowrap;
+    align-self: center;
+
+    font-weight: bolder;
+    font-size: larger;
+  }
+
+  .accordionContent {
+    width: 0;
+    overflow: hidden;
+    transition: width 1s ease-out, background-color 1s ease-out;
+    padding: 0 2rem;
+    background-color: var(--purpleDark);
+    visibility: collapse;
+  }
+  
+  .accordionStep.open .accordionContent {
+    width: calc(100vw - 15rem);
+    background-color: var(--black);
+    visibility: visible;
+    transition: width 1s ease-out, background-color 1s ease-out;
+    border: 1px var(--white) solid;
+    border-left: none;
+    border-top: none;
+  }
+  
+  .accordionStep.open .accordionContent img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+  }

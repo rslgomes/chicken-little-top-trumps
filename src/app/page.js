@@ -1,5 +1,12 @@
+import styles from './styles/home.module.css';
+import Frame1 from '../components/Frame1';
+import Frame2 from '../components/Frame2';
+
 export default function Home() {
   return (
-    <h1>Hello World</h1>
+    <div className="mainContainer">
+      <Frame1 />
+      <Frame2 />
+    </div>
   );
 }
